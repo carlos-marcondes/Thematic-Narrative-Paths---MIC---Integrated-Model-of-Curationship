@@ -1,0 +1,167 @@
+https://issemantic.net/rdf-visualizer
+## Curatorial Work_V3 The Rio de Janeiro of Machado de Assis: interlinking Brazilian digital heritage collections 
+
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix crr: <http://exemplos.org/crr/> .
+@prefix mic: <http://exemplos.org/mic/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns/> .
+@prefix mic:   <http://exemplos.org/mic/> .
+@prefix top:   <http://exemplos.org/top/> .
+@prefix schema: <http://schema.org/>.
+@prefix foaf: <http://xmlns.com/foaf/0.1/>.
+@prefix skos: <http://www.w3.org/2004/02/skos/core/>.  
+@prefix cito: <http://purl.org/spar/cito/>.
+@prefix wo: <https://www.wikidata.org/wiki/>.
+@prefix att: <https://www.getty.edu/research/tools/vocabularies/aat/>.
+@prefix edm: <http://www.europeana.eu/schemas/edm/>.
+@prefix oa: <http://www.w3.org/ns/oa/>.
+@prefix wikidata: <http://www.wikidata.org/wiki/Property/>.
+{
+<http://exemplos.org/crr/Machado_de_Assis>
+
+  dct:hasPart <http://exemplos.org/crr/Machado_Rio>;
+  dct:hasPart <http://exemplos.org/crr/Machado_Escravidao>;
+  dct:hasPart <http://exemplos.org/crr/Machado_Memorias_postumas>;
+  dct:hasPart <http://exemplos.org/crr/Portinari>;
+  dct:hasPart <http://exemplos.org/crr/Portinari_Memorias_postumas>;
+  dct:hasPart <http://exemplos.org/crr/Memorias_postumas_novel_movie>;
+  dct:hasPart <http://exemplos.org/crr/Machado_Letter_Abolition_slavery>.
+}
+
+{
+<http://exemplos.org/crr/Machado_Rio> 
+   rdf:type mic:E081_Annotation; 
+   mic:hasSubject <http://exemplos.org/000001>;
+   wikidata:P7087 <http://exemplos.org/000003>.
+}
+
+{
+<http://exemplos.org/crr/Machado_Escravidao>
+    rdf:type mic:E081_Annotation; 
+    mic:hasSubject <http://exemplos.org/000001>;
+    skos:related <http://exemplos.org/000004>.
+}
+	
+{
+<http://exemplos.org/crr/Machado_Memorias_postumas>
+    rdf:type mic:E081_Annotation; 
+    dct:description_justification "Este é o romance mais famoso de Machado de Assis hdgshdg jhsjdh de sdsd dsddd ... ";
+    mic:hasSubject <http://exemplos.org/000001>;
+    crr:0022_creator <http://exemplos.org/000001>.
+}
+
+{
+<http://exemplos.org/crr/Memorias_postumas_Portinari>
+    rdf:type mic:E081_Annotation; 
+    dct:description_justification "Portinari illustrates Memórias Póstumas de Bráz Cubas, the famous novel by Machado de Assis ... ";
+	mic:hasSubject <http://exemplos.org/000005>;
+	crr:0051_is_llustrated_by <http://exemplos.org/000002>.
+}
+ 
+{
+<http://exemplos.org/crr/Portinari>
+     rdf:type mic:E081_Annotation; 
+     mic:hasSubject <http://exemplos.org/000002>;
+     crr:0095_contribuitor <http://exemplos.org/000006>.
+}
+
+{
+<http://exemplos.org/crr/Lagarta_Memorias_postumas>
+     rdf:type mic:E081_Annotation; 
+     mic:hasSubject <http://exemplos.org/000006>; 
+     crr:0091_is_Illustrated_by <http://exemplos.org/000005>.
+}
+
+{
+<http://exemplos.org/crr/Memorias_postumas_novel_movie>
+     rdf:type mic:E081_Annotation; 
+     mic:hasSubject <http://exemplos.org/000005>; 
+     crr:0091_is_Illustrated_by <http://exemplos.org/000007>.
+}
+
+{	 
+##  Letter by Machado de Assis commenting a law conserning the abbolition of slavery in Brazil
+<http://exemplos.org/crr/Machado_Letter_Abolition_slavery>
+     rdf:type mic:E081_Annotation; 
+     mic:hasSubject <http://exemplos.org/000008>; 
+     crr:0021_created_by <http://exemplos.org/000001>.
+}
+
+{
+##  Letter by Machado de Assis is about slavery in Brazil
+<http://exemplos.org/crr/Letter_Abolition_slavery>
+     rdf:type mic:E081_Annotation; 
+     mic:hasSubject <http://exemplos.org/000008>; 
+     dct:Subject <http://exemplos.org/000004>.
+}
+
+	 
+### Digital Web Resources
+
+{
+<http://exemplos.org/000001>
+    rdf:type mic:E2_Agent;
+	skos:label "Machado de Assis, Brazilian writer";
+    mic:crr_181_Incollection <https://www.wikidata.org/wiki/Wikidata:Main_Page>;
+    dct:identifier.URLinInstitution <https://www.wikidata.org/wiki/Q311145>.
+}
+
+{
+<http://exemplos.org/000002>
+    rdf:type mic:E2_Agent;
+	skos:label "Candido Portinari, Brazilian painter";
+    mic:crr_181_Incollection <https://www.wikidata.org/wiki/Wikidata:Main_Page>;
+    dct:identifier.URLinInstitution <https://www.wikidata.org/wiki/Q319532>.
+}
+
+{
+<http://exemplos.org/000003>
+    rdf:type mic:E4_Place;
+	skos:label "Rio de Janeiro, the city where Machado de Assis was born in 1839";
+    mic:crr_181_Incollection <https://www.wikidata.org/wiki/Wikidata:Main_Page>;
+    dct:identifier.URLinInstitution <https://www.wikidata.org/wiki/Q8678>.
+}
+	
+{
+<http://exemplos.org/000004>
+    rdf:type mic:E3_Concept;
+    skos:label "Slavery in Brazil";
+	mic:crr_181_Incollection <https://www.wikidata.org/wiki/Wikidata:Main_Page>;
+    dct:identifier.URLinInstitution <https://www.wikidata.org/wiki/Q136038554>.
+}
+
+{
+<http://exemplos.org/000005>
+    rdf:type mic:E01_Digital_Heritage_Object;
+	skos:label "Posthumous Memoirs of Brás Cubas, novel by Machado de Assis";
+    mic:crr_181_Incollection <https://www.portinari.org.br/>;
+    dct:identifier.URLinInstitution <https://www.portinari.org.br/acervo/bibliografico/25019/memorias-posthumas-de-braz-cubas/>.
+}
+
+{	
+<http://exemplos.org/000006>
+    rdf:type mic:E01_Digital_Heritage_Object;
+	skos:label "Caterpillar, drawing by Cândido Portinari to illustrate Posthumous Memoirs of Braz Cubas, a novel by Machado de Assis.";
+    mic:crr_181_Incollection <https://www.portinari.org.br/>;
+	dct:identifier.URLinInstitution <https://www.portinari.org.br/acervo/obras/19638/lagarta>.
+}
+
+{	
+<http://exemplos.org/000007>
+    rdf:type mic:E01_Digital_Heritage_Object;
+	skos:label "Posthumous Memoirs of Braz Cubas, a movie inspired by Machado de Assis's novel";
+	mic:crr_181_Incolletion <https://www.youtube.com>;
+	dct:identifier.URLinInstitution <https://www.youtube.com/watch?v=1aJ14M08YT0>.
+}
+
+{	
+<http://exemplos.org/000008>
+    rdf:type mic:E01_Digital_Heritage_Object;
+	skos:label "Letter by Machado de Assis commenting a law conserning the abbolition of slavery in Brazil";
+	mic:crr_181_Incollection <https://acervobndigital.bn.gov.br/>;
+	dct:identifier.URLinInstitution <https://acervobndigital.bn.gov.br/sophia/index.asp?codigo_sophia=461>.
+}
+
+
+   
+
