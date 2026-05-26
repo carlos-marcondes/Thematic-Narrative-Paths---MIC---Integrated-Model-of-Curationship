@@ -1,4 +1,3 @@
-https://issemantic.net/rdf-visualizer
 ## Curatorial Work_V3 The Rio de Janeiro of Machado de Assis: interlinking Brazilian digital heritage collections 
 
 @prefix dct: <http://purl.org/dc/terms/> .
@@ -46,7 +45,7 @@ https://issemantic.net/rdf-visualizer
 <http://exemplos.org/crr/Machado_Memorias_postumas>
     rdf:type mic:E081_Annotation; 
     dct:description_justification "Este é o romance mais famoso de Machado de Assis hdgshdg jhsjdh de sdsd dsddd ... ";
-    mic:hasSubject <http://exemplos.org/000001>;
+    mic:hasSubject <http://exemplos.org/000005>;
     crr:0022_creator <http://exemplos.org/000001>.
 }
 
@@ -54,29 +53,23 @@ https://issemantic.net/rdf-visualizer
 <http://exemplos.org/crr/Memorias_postumas_Portinari>
     rdf:type mic:E081_Annotation; 
     dct:description_justification "Portinari illustrates Memórias Póstumas de Bráz Cubas, the famous novel by Machado de Assis ... ";
-	mic:hasSubject <http://exemplos.org/000005>;
-	crr:0051_is_llustrated_by <http://exemplos.org/000002>.
+	mic:hasSubject <http://exemplos.org/000002>;
+	crr:0095_contribuitor <http://exemplos.org/000005>.
 }
  
-{
-<http://exemplos.org/crr/Portinari>
-     rdf:type mic:E081_Annotation; 
-     mic:hasSubject <http://exemplos.org/000002>;
-     crr:0095_contribuitor <http://exemplos.org/000006>.
-}
 
 {
 <http://exemplos.org/crr/Lagarta_Memorias_postumas>
      rdf:type mic:E081_Annotation; 
-     mic:hasSubject <http://exemplos.org/000006>; 
-     crr:0091_is_Illustrated_by <http://exemplos.org/000005>.
+     mic:hasSubject <http://exemplos.org/000005>; 
+     crr:0091_is_Illustrated_by <http://exemplos.org/000006>.
 }
 
 {
 <http://exemplos.org/crr/Memorias_postumas_novel_movie>
      rdf:type mic:E081_Annotation; 
-     mic:hasSubject <http://exemplos.org/000005>; 
-     crr:0091_is_Illustrated_by <http://exemplos.org/000007>.
+     mic:hasSubject <http://exemplos.org/000007>; 
+     crr:0082_is_Inspiered_by <http://exemplos.org/000005>.
 }
 
 {	 
@@ -143,6 +136,7 @@ https://issemantic.net/rdf-visualizer
     rdf:type mic:E01_Digital_Heritage_Object;
 	skos:label "Caterpillar, drawing by Cândido Portinari to illustrate Posthumous Memoirs of Braz Cubas, a novel by Machado de Assis.";
     mic:crr_181_Incollection <https://www.portinari.org.br/>;
+	dct:creator <http://exemplos.org/000002>;
 	dct:identifier.URLinInstitution <https://www.portinari.org.br/acervo/obras/19638/lagarta>.
 }
 
@@ -162,6 +156,4 @@ https://issemantic.net/rdf-visualizer
 	dct:identifier.URLinInstitution <https://acervobndigital.bn.gov.br/sophia/index.asp?codigo_sophia=461>.
 }
 
-
-   
 
