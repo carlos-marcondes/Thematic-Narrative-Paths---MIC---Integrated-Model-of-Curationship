@@ -54,7 +54,7 @@
     rdf:type mic:E081_Annotation; 
     dct:description_justification "Portinari illustrates Memórias Póstumas de Bráz Cubas, the famous novel by Machado de Assis ... ";
 	mic:hasSubject <http://exemplos.org/000002>;
-	crr:0095_contribuitor <http://exemplos.org/000005>.
+	dct:contribuitor <http://exemplos.org/000005>.
 }
  
 
