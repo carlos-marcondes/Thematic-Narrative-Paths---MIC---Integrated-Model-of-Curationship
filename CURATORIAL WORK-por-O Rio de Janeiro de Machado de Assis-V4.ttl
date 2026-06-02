@@ -3,7 +3,7 @@
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix crr: <http://exemplos.org/crr/> .
 @prefix mic: <http://exemplos.org/mic/> .
-@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns/> .
 @prefix top:   <http://exemplos.org/top/> .
 @prefix schema: <http://schema.org/>.
 @prefix foaf: <http://xmlns.com/foaf/0.1/>.
@@ -17,6 +17,17 @@
 {
 <http://exemplos.org/crr/Machado_de_Assis>
 
+  dct:title "Machado de Assis nos acervos digitais das instituições (brasileiras) de Cultura, Memória e Patrimônio";
+  dct:description "Exmplo de Obra Curatorial relacionando Machado de Assis ao Rio de Janeiro ilustrada através de objetos digitais de acervos digitais de acervos de instituições brasileiras";
+  dct:hasVersion "1.0";
+  dct:created "2025-02-26";
+  dct:motified "2022-09-13";
+  crr:0021_Created_by <http://exemplos.org/mic/Carlos_Marcondes>;
+  dct:license <https://creativecommons.org/licenses/by-nc-nd/4.0/>;
+  dct:subject "Literatura Brasileiras";
+  dct:subject "Machado de Assis";
+  dct:publisher <https://ppggoc.eci.ufmg.br/>;
+  cito:citation <https://doi.org/10.1590/1983-682120211412>;
   dct:hasPart <http://exemplos.org/crr/Machado_Rio>;
   dct:hasPart <http://exemplos.org/crr/Machado_Escravidao>;
   dct:hasPart <http://exemplos.org/crr/Machado_Memorias_postumas>;
@@ -45,15 +56,15 @@
     rdf:type mic:E081_Annotation; 
     dct:description_justification "Este é o romance mais famoso de Machado de Assis hdgshdg jhsjdh de sdsd dsddd ... ";
     mic:hasSubject <http://exemplos.org/000005>;
-    crr:0022_creator <http://exemplos.org/000001>.
+    crr:0021_Created_by <http://exemplos.org/000001>.
 }
 
 {
 <http://exemplos.org/crr/Memorias_postumas_Portinari>
     rdf:type mic:E081_Annotation; 
     dct:description_justification "Portinari illustrates Memórias Póstumas de Bráz Cubas, the famous novel by Machado de Assis ... ";
-	mic:hasSubject <http://exemplos.org/000002>;
-	dct:contribuitor <http://exemplos.org/000005>.
+	mic:hasSubject <http://exemplos.org/000005>;
+	crr:051_Has_theContribution_of <http://exemplos.org/000002>.
 }
  
 
@@ -76,7 +87,7 @@
 <http://exemplos.org/crr/Machado_Letter_Abolition_slavery>
      rdf:type mic:E081_Annotation; 
      mic:hasSubject <http://exemplos.org/000008>; 
-     crr:0021_created_by <http://exemplos.org/000001>.
+     crr:0021_Created_by <http://exemplos.org/000001>.
 }
 
 {
@@ -135,7 +146,7 @@
     rdf:type mic:E01_Digital_Heritage_Object;
 	skos:label "Caterpillar, drawing by Cândido Portinari to illustrate Posthumous Memoirs of Braz Cubas, a novel by Machado de Assis.";
     crr:0181_Incollection <https://www.portinari.org.br/>;
-	dct:creator <http://exemplos.org/000002>;
+	crr:0021_Created_by <http://exemplos.org/000002>;
 	dct:identifier.URLinInstitution <https://www.portinari.org.br/acervo/obras/19638/lagarta>.
 }
 
@@ -154,4 +165,3 @@
 	crr:0181_Incollection <https://acervobndigital.bn.gov.br/>;
 	dct:identifier.URLinInstitution <https://acervobndigital.bn.gov.br/sophia/index.asp?codigo_sophia=461>.
 }
-
