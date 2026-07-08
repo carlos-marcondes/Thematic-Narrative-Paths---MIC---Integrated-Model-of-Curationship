@@ -1,18 +1,18 @@
 ## Curatorial Work_V3 The Rio de Janeiro of Machado de Assis: interlinking Brazilian digital heritage collections 
 
-@prefix dct: <http://purl.org/dc/terms/> .
-@prefix crr: <http://exemplos.org/crr/> .
-@prefix mic: <http://exemplos.org/mic/> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns/> .
-@prefix top:   <http://exemplos.org/top/> .
-@prefix schema: <http://schema.org/>.
-@prefix foaf: <http://xmlns.com/foaf/0.1/>.
-@prefix skos: <http://www.w3.org/2004/02/skos/core/>.  
-@prefix cito: <http://purl.org/spar/cito/>.
-@prefix wo: <https://www.wikidata.org/wiki/>.
-@prefix att: <https://www.getty.edu/research/tools/vocabularies/aat/>.
-@prefix edm: <http://www.europeana.eu/schemas/edm/>.
-@prefix oa: <http://www.w3.org/ns/oa/>.
+@prefix dct:      <http://purl.org/dc/terms/> .
+@prefix crr:      <http://exemplos.org/crr/> .
+@prefix mic:      <http://exemplos.org/mic/> .
+@prefix rdf:      <http://www.w3.org/1999/02/22-rdf-syntax-ns/> .
+@prefix top:      <http://exemplos.org/top/> .
+@prefix schema:   <http://schema.org/>.
+@prefix foaf:     <http://xmlns.com/foaf/0.1/>.
+@prefix skos:     <http://www.w3.org/2004/02/skos/core/>.  
+@prefix cito:     <http://purl.org/spar/cito/>.
+@prefix wo:       <https://www.wikidata.org/wiki/>.
+@prefix att:      <https://www.getty.edu/research/tools/vocabularies/aat/>.
+@prefix edm:      <http://www.europeana.eu/schemas/edm/>.
+@prefix oa:       <http://www.w3.org/ns/oa/>.
 @prefix wikidata: <http://www.wikidata.org/wiki/Property/>.
 {
 <http://exemplos.org/crr/Machado_de_Assis>
@@ -27,14 +27,14 @@
   dct:subject "Literatura Brasileiras";
   dct:subject "Machado de Assis";
   dct:publisher <https://ppggoc.eci.ufmg.br/>;
-  cito:citation <https://doi.org/10.1590/1983-682120211412>;
+  cito:citation <https://doi.org/10.1590/1983-68212022153>;
   dct:hasPart <http://exemplos.org/crr/Machado_Rio>;
-  dct:hasPart <http://exemplos.org/crr/Machado_Escravidao>;
+  dct:hasPart <http://exemplos.org/crr/Machado_Slavery>;
   dct:hasPart <http://exemplos.org/crr/Machado_Memorias_postumas>;
-  dct:hasPart <http://exemplos.org/crr/Portinari>;
   dct:hasPart <http://exemplos.org/crr/Portinari_Memorias_postumas>;
   dct:hasPart <http://exemplos.org/crr/Memorias_postumas_novel_movie>;
-  dct:hasPart <http://exemplos.org/crr/Machado_Letter_Abolition_slavery>.
+  dct:hasPart <http://exemplos.org/crr/Machado_Letter_Abolition_slavery>;
+  dct:hasPart <http://exemplos.org/crr/Letter_Abolition_slavery_Slavery_Brazil>.
 }
 
 {
@@ -56,7 +56,7 @@
     rdf:type mic:E081_Annotation; 
     dct:description_justification "Este é o romance mais famoso de Machado de Assis hdgshdg jhsjdh de sdsd dsddd ... ";
     mic:hasSubject <http://exemplos.org/000005>;
-    crr:0021_Created_by <http://exemplos.org/000001>.
+    dct:creator <http://exemplos.org/000001>.
 }
 
 {
@@ -64,7 +64,7 @@
     rdf:type mic:E081_Annotation; 
     dct:description_justification "Portinari illustrates Memórias Póstumas de Bráz Cubas, the famous novel by Machado de Assis ... ";
 	mic:hasSubject <http://exemplos.org/000005>;
-	crr:051_Has_theContribution_of <http://exemplos.org/000002>.
+	dct:conribuitor <http://exemplos.org/000002>.
 }
  
 
@@ -87,15 +87,15 @@
 <http://exemplos.org/crr/Machado_Letter_Abolition_slavery>
      rdf:type mic:E081_Annotation; 
      mic:hasSubject <http://exemplos.org/000008>; 
-     crr:0021_Created_by <http://exemplos.org/000001>.
+     dct:creator <http://exemplos.org/000001>.
 }
 
 {
-##  Letter by Machado de Assis is about slavery in Brazil
-<http://exemplos.org/crr/Letter_Abolition_slavery>
+##  Letter by Machado de Assis about slavery in Brazil
+<http://exemplos.org/crr/Letter_Abolition_slavery_Slavery_Brazil>
      rdf:type mic:E081_Annotation; 
      mic:hasSubject <http://exemplos.org/000008>; 
-     dct:Subject <http://exemplos.org/000004>.
+     crr:0061_Has_Subject <http://exemplos.org/000004>.
 }
 
 	 
@@ -138,6 +138,7 @@
     rdf:type mic:E01_Digital_Heritage_Object;
 	skos:label "Posthumous Memoirs of Brás Cubas, novel by Machado de Assis";
     crr:0181_Incollection <https://www.portinari.org.br/>;
+	dct:coverage "Brasil, Rio de Janeiro, Rio de Janeiro";
     dct:identifier.URLinInstitution <https://www.portinari.org.br/acervo/bibliografico/25019/memorias-posthumas-de-braz-cubas/>.
 }
 
@@ -146,7 +147,8 @@
     rdf:type mic:E01_Digital_Heritage_Object;
 	skos:label "Caterpillar, drawing by Cândido Portinari to illustrate Posthumous Memoirs of Braz Cubas, a novel by Machado de Assis.";
     crr:0181_Incollection <https://www.portinari.org.br/>;
-	crr:0021_Created_by <http://exemplos.org/000002>;
+	dct:creator <http://exemplos.org/000002>;
+	edm:hasView <https://acervo-portinari.s3.sa-east-1.amazonaws.com/38ac5418ffb6c252cae385b960593def.jpeg>;
 	dct:identifier.URLinInstitution <https://www.portinari.org.br/acervo/obras/19638/lagarta>.
 }
 
@@ -161,7 +163,13 @@
 {	
 <http://exemplos.org/000008>
     rdf:type mic:E01_Digital_Heritage_Object;
-	skos:label "Letter by Machado de Assis commenting a law conserning the abbolition of slavery in Brazil";
+	skos:label "Letter by Machado de Assis commenting a law concerning the abolition of slavery in Brazil";
 	crr:0181_Incollection <https://acervobndigital.bn.gov.br/>;
+	dct:subject "Assis, Machado de, 1839-1908 - Correspondência";
+	dct:subject "Rio Branco, José Maria da Silva Paranhos, Barão do, 1845-1912 - Correspondência";
+    dct:subject "Brasil - História - Lei do Ventre Livre, 1871";
+    dct:subject "Assis, Machado de, 1839-1908 - Correspondence";
+    dct:subject "Rio Branco, José Maria da Silva Paranhos, Baron of, 1845-1912 - Correspondence";
+    dct:subject "Brazil - History - Ventre Livre law and legislation, 1871"; 	
 	dct:identifier.URLinInstitution <https://acervobndigital.bn.gov.br/sophia/index.asp?codigo_sophia=461>.
 }
